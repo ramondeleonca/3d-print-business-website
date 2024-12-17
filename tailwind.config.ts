@@ -30,6 +30,11 @@ export default {
   ],
   theme: {
   	extend: {
+		fontFamily: {
+			mont: "var(--font-mont)",
+			nexa: "var(--font-nexa)",
+			"creato-display": "var(--font-creato-display)"
+		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
