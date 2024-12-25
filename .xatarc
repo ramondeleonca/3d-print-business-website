@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://coahuilacreation-dbr5q6.us-east-1.xata.sh/db/coahuilacreations",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}

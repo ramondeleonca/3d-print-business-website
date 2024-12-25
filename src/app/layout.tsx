@@ -5,7 +5,25 @@ import Navbar from "@/components/nav-bar";
 import appConfig from "./app-config";
 
 export const metadata: Metadata = {
-  title: appConfig.appName
+  title: appConfig.appName,
+  robots: "index, follow",
+  icons: [
+    {
+      url: "/assets/cclogo.svg",
+      rel: "icon",
+      media: "(prefers-color-scheme:no-preference)"
+    },
+    {
+      url: "/assets/cclogo.svg",
+      rel: "icon",
+      media: "(prefers-color-scheme:dark)"
+    },
+    {
+      url: "/assets/cclogo-black.svg",
+      rel: "icon",
+      media: "(prefers-color-scheme:light)"
+    }
+  ]
 };
 
 const montFont = localFont({
@@ -119,7 +137,7 @@ const creatoDisplayFont = localFont({
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${montFont.variable} ${nexaFont.variable} ${creatoDisplayFont.variable} antialiased bg-theme-bg`}>
+      <body className={`${montFont.variable} ${nexaFont.variable} ${creatoDisplayFont.variable} antialiased`}>
         <Navbar></Navbar>
         {children}
       </body>
