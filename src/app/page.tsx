@@ -11,6 +11,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import Head from "next/head";
 import * as motion from "motion/react-client";
 import { Instagram, Mail } from "lucide-react";
+import { scrollSmoothToTarget } from "@/lib/utils";
 
 function Home() {
     return (
@@ -36,12 +37,12 @@ function Home() {
 
                         {/* Content */}
                         <div className="content max-sm:w-full w-2/3 md:w-1/2 h-full absolute z-20 py-24 px-10 md:px-20">
-                            <h1 className="text-white max-sm:text-5xl text-7xl md:text-9xl w-full flex flex-wrap font-nexa font-black">
+                            <h1 className="text-white max-sm:text-5xl text-7xl md:text-9xl w-full flex flex-wrap font-mont font-black">
                                 {appConfig.appName.split(" ").map((word, index) => <span key={word}>{word}&nbsp;</span>)}
                             </h1>
                             <p className="text-xl md:text-3xl text-white font-creato-display font-medium mt-4 max-sm:mt-6">{appConfig.description}</p>
                             <Button asChild variant="outline" className="mt-2 max-sm:mt-4" size="lg">
-                                <Link href="/#cotiza">Cotiza con nosotros</Link>
+                                <Link href="#cotiza" onClick={scrollSmoothToTarget}>Cotiza con nosotros</Link>
                             </Button>
                         </div>
                     </div>
@@ -70,7 +71,7 @@ function Home() {
                                 </CardContent>
                                 <CardFooter className="flex flex-col">
                                     <Button asChild className="w-full">
-                                        <Link href="/#cotiza"><b>Cotiza ahora</b></Link>
+                                        <Link href="#cotiza" onClick={scrollSmoothToTarget}><b>Cotiza ahora</b></Link>
                                     </Button>
                                     <p className="text-xs opacity-60 mt-1">¡Fabriquemos tu modelo 3D!</p>
                                 </CardFooter>
@@ -88,7 +89,7 @@ function Home() {
                                 </CardContent>
                                 <CardFooter className="flex flex-col">
                                     <Button asChild className="w-full">
-                                        <Link href="/#contacto">Contáctanos</Link>
+                                        <Link href="#contacto" onClick={scrollSmoothToTarget}>Contáctanos</Link>
                                     </Button>
                                     <p className="text-xs opacity-60 mt-1">Platiquemos sobre tu modelo</p>
                                 </CardFooter>
@@ -106,7 +107,7 @@ function Home() {
                                 </CardContent>
                                 <CardFooter className="flex flex-col">
                                     <Button asChild className="w-full">
-                                        <Link href="/#contacto">Contáctanos</Link>
+                                        <Link href="#contacto" onClick={scrollSmoothToTarget}>Contáctanos</Link>
                                     </Button>
                                     <p className="text-xs opacity-60 mt-1">¡Muestranos tu idea!</p>
                                 </CardFooter>
@@ -124,7 +125,7 @@ function Home() {
                                 </CardContent>
                                 <CardFooter className="flex flex-col">
                                     <Button asChild className="w-full">
-                                        <Link href="/#contacto">Contáctanos</Link>
+                                        <Link href="#contacto" onClick={scrollSmoothToTarget}>Contáctanos</Link>
                                     </Button>
                                     <p className="text-xs opacity-60 mt-1">¡Queremos saber más sobre tu proyecto!</p>
                                 </CardFooter>
@@ -155,7 +156,7 @@ function Home() {
                         </div>
                     </section>
 
-                    <section className="mt-4 w-full">
+                    <section className="mt-4 w-full" id="contacto">
                         {/* HEADER */}
                         <header className="w-full flex justify-center mb-4">
                             <h2 className="font-nexa font-black text-5xl text-center">¿List@ para crear?</h2>
@@ -164,10 +165,18 @@ function Home() {
                         <div className="w-full">
                             <h3 className="text-xl font-creato-display text-center">Contáctanos</h3>
                             <div className="w-full flex justify-evenly flex-wrap gap-4">
-                                <Link href={`mailto:${appConfig.contact.email}`} target="_blank" className="flex gap-2 items-center">
+                                <div className="flex gap-2 items-center">
                                     <Mail></Mail>
-                                    {appConfig.contact.email}
-                                </Link>
+                                    <div className="flex flex-col items-left">
+                                        <Link href={`mailto:${appConfig.contact.email}`} target="_blank">
+                                            {appConfig.contact.email}
+                                        </Link>
+
+                                        <Link href={`mailto:${appConfig.contact.altEmail}`} target="_blank">
+                                            {appConfig.contact.altEmail}
+                                        </Link>
+                                    </div>
+                                </div>
 
                                 <Link href={`https://www.instagram.com/${appConfig.contact.instagram}`} target="_blank" className="flex gap-2 items-center">
                                     <Instagram></Instagram>
@@ -175,6 +184,10 @@ function Home() {
                                 </Link>
                             </div>
                         </div>
+                    </section>
+
+                    <section>
+                        
                     </section>
                 </div>
             </Lenis>
