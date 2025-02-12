@@ -54,7 +54,7 @@ function Home() {
                     <section className="mt-4">
                         {/* HEADER */}
                         <header className="w-full flex justify-center mb-4">
-                            <h2 className="font-nexa font-black text-5xl text-center">Nuestros servicios</h2>
+                            <h2 className="font-creato-display font-black text-5xl text-center">Nuestros servicios</h2>
                         </header>
                         
                         {/* CONTENT */}
@@ -137,12 +137,12 @@ function Home() {
                         <div className="w-full h-full relative">
                             <div className="top-0 left-0 right-0 bottom-0 absolute z-30 flex justify-between flex-col items-center">
                                 <div className="_top mt-4">
-                                    <h2 className="flex flex-wrap justify-center text-center font-nexa font-black text-6xl text-white px-4">Conoce Nuestra</h2>
+                                    <h2 className="flex flex-wrap justify-center text-center font-creato-display font-black text-6xl text-white px-4">Conoce Nuestra</h2>
                                 </div>
 
                                 <div className="_bottom mb-10">
-                                    {/* <motion.h2 initial={{ translateY: 50, opacity: 0, scale: 0.5 }} whileInView={{ translateY: 0, opacity: 1, scale: 1 }} className="flex flex-wrap justify-center text-center font-nexa font-black text-7xl mt-4 text-white max-sm:text-5xl max-xs:text-4xl px-4">Variedad de materiales</motion.h2> */}
-                                    <h2 className="flex flex-wrap justify-center text-center font-nexa font-black text-7xl mt-4 text-white max-sm:text-5xl max-xs:text-4xl px-4">Variedad de materiales</h2>
+                                    {/* <motion.h2 initial={{ translateY: 50, opacity: 0, scale: 0.5 }} whileInView={{ translateY: 0, opacity: 1, scale: 1 }} className="flex flex-wrap justify-center text-center font-creato-display font-black text-7xl mt-4 text-white max-sm:text-5xl max-xs:text-4xl px-4">Variedad de materiales</motion.h2> */}
+                                    <h2 className="flex flex-wrap justify-center text-center font-creato-display font-black text-7xl mt-4 text-white max-sm:text-5xl max-xs:text-4xl px-4">Variedad de materiales</h2>
                                     <p className="text-white flex flex-wrap justify-center text-center font-creato-display font-normal px-8">Contamos con una variedad de materiales con diferentes propiedades estéticas y mecánicas</p>
                                     {/* <div className="w-full flex justify-center">
                                         <Button asChild variant="outline">
@@ -159,7 +159,7 @@ function Home() {
                     <section className="mt-4 w-full" id="contacto">
                         {/* HEADER */}
                         <header className="w-full flex justify-center mb-4">
-                            <h2 className="font-nexa font-black text-5xl text-center">¿List@ para crear?</h2>
+                            <h2 className="font-creato-display font-black text-5xl text-center">¿List@ para crear?</h2>
                         </header>
 
                         <div className="w-full">

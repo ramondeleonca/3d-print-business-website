@@ -3,23 +3,24 @@ import localFont from "next/font/local";
 import "./globals.scss";
 import Navbar from "@/components/nav-bar";
 import appConfig from "./app-config";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: appConfig.appName,
   robots: "index, follow",
   icons: [
     {
-      url: "/assets/cclogo.svg",
+      url: "/assets/ccb.svg",
       rel: "icon",
       media: "(prefers-color-scheme:no-preference)"
     },
     {
-      url: "/assets/cclogo.svg",
+      url: "/assets/ccw.svg",
       rel: "icon",
       media: "(prefers-color-scheme:dark)"
     },
     {
-      url: "/assets/cclogo-black.svg",
+      url: "/assets/ccb.svg",
       rel: "icon",
       media: "(prefers-color-scheme:light)"
     }
@@ -40,22 +41,6 @@ const montFont = localFont({
     }
   ],
   variable: "--font-mont"
-});
-
-const nexaFont = localFont({
-  src: [
-    {
-      path: "./fonts/Nexa-ExtraLight.ttf",
-      weight: "200",
-      style: "normal"
-    },
-    {
-      path: "./fonts/Nexa-Heavy.ttf",
-      weight: "800",
-      style: "normal"
-    }
-  ],
-  variable: "--font-nexa"
 });
 
 const creatoDisplayFont = localFont({
@@ -137,7 +122,7 @@ const creatoDisplayFont = localFont({
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${montFont.variable} ${nexaFont.variable} ${creatoDisplayFont.variable} antialiased`}>
+      <body className={`${montFont.variable} ${creatoDisplayFont.variable} antialiased`}>
         <Navbar></Navbar>
         {children}
       </body>
